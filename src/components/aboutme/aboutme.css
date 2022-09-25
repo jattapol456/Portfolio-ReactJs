@@ -11,6 +11,6 @@
   opacity: 0.72;
 }
 
-.selection .text-Developer::selection {
+.text-Developer::selection {
   color: white;
 }
