@@ -90,7 +90,7 @@ export default function Aboutme() {
         <div className="text-center space-y-2">
           <p className="text-3xl font-bold">Jattapol Suayoosay</p>
           <p className="text-date text-sm font-bold">February 27th, 2000</p>
-          <p className="text-Developer text-lg font-bold">Frontend Developer</p>
+          <p className="text-developer text-lg font-bold">Frontend Developer</p>
         </div>
       </div>
     </div>
