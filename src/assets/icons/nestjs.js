@@ -8,7 +8,7 @@ export default function Nestjs() {
       version="1.1"
       width="80"
       height="80"
-      fill="#7e7e7e"
+      fill="currentColor"
       class=""
       viewBox="0 -0.5 256 256"
     >

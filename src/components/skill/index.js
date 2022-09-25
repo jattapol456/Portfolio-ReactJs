@@ -25,27 +25,27 @@ export default function Skill() {
         <div className='text-center space-y-8'>
           <p>Programming Languages</p>
           <div className='grid grid-cols-6 gap-10'>
-            <div className='text-center space-y-3'>
+            <div className='skill text-center space-y-3 hover:scale-125'>
               <Html/>
               <p>HTML</p>
             </div>
-            <div className='text-center space-y-3'>
+            <div className='skill text-center space-y-3 hover:scale-125'>
               <Javascrip/>
               <p>Javascrip</p>
             </div>
-            <div className='text-center space-y-3'>
+            <div className='skill text-center space-y-3 hover:scale-125'>
               <Typescrip className="w-[75px] h-[75px]"/>
               <p>Typescrip</p>
             </div>
-            <div className='text-center space-y-3'>
+            <div className='skill text-center space-y-3 hover:scale-125'>
               <Css/>
               <p>Css</p>
             </div>
-            <div className='text-center space-y-3'>
+            <div className='skill text-center space-y-3 hover:scale-125'>
               <Sass/>
               <p>Sass</p>
             </div>
-            <div className='text-center space-y-3'>
+            <div className='skill text-center space-y-3 hover:scale-125'>
               <Python/>
               <p>Python</p>
             </div>
@@ -57,23 +57,23 @@ export default function Skill() {
         <div className='text-center space-y-8'>
           <p>Framework</p>
           <div className='grid grid-cols-5 gap-10'>
-            <div className='text-center space-y-3'>
+            <div className='skill text-center space-y-3 hover:scale-125'>
               <Vuejs/>
               <p>Vue.js</p>
             </div>
-            <div className='text-center space-y-3'>
+            <div className='skill text-center space-y-3 hover:scale-125'>
               <Nuxtjs/>
               <p>Nuxt.js</p>
             </div>
-            <div className='text-center space-y-3'>
+            <div className='skill text-center space-y-3 hover:scale-125'>
               <Reacrjs/>
               <p>Reacr.js</p>
             </div>
-            <div className='text-center space-y-3'>
+            <div className='skill text-center space-y-3 hover:scale-125'>
               <Flutter/>
               <p>Flutter</p>
             </div>
-            <div className='text-center space-y-3'>
+            <div className='skill text-center space-y-3 hover:scale-125'>
               <Nestjs/>
               <p>Nest.js</p>
             </div>
@@ -85,15 +85,15 @@ export default function Skill() {
         <div className='text-center space-y-8'>
           <p>Databescs</p>
           <div className='grid grid-cols-3 gap-10'>
-            <div className='text-center space-y-3'>
+            <div className='skill text-center space-y-3 hover:scale-125'>
               <Mongodb/>
               <p>MongoDB</p>
             </div>
-            <div className='text-center space-y-3'>
+            <div className='skill text-center space-y-3 hover:scale-125'>
               <Mysql/>
               <p>MySQL</p>
             </div>
-            <div className='text-center space-y-3'>
+            <div className='skill text-center space-y-3 hover:scale-125'>
               <Firebase/>
               <p>Firebase</p>
             </div>
@@ -105,15 +105,15 @@ export default function Skill() {
         <div className='text-center space-y-8'>
           <p>Tools</p>
           <div className='grid grid-cols-3 gap-10'>
-            <div className='text-center space-y-3'>
+            <div className='skill text-center space-y-3 hover:scale-125'>
               <Figma/>
               <p>Figma</p>
             </div>
-            <div className='text-center space-y-3'>
+            <div className='skill text-center space-y-3 hover:scale-125'>
               <Photoshop/>
               <p>PhotoShop</p>
             </div>
-            <div className='text-center space-y-3'>
+            <div className='skill text-center space-y-3 hover:scale-125'>
               <Postman/>
               <p>Postman</p>
             </div>

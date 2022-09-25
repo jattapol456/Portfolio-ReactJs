@@ -5,7 +5,7 @@ export default function Mysql() {
     <svg
       width="80"
       height="80"
-      fill="#7e7e7e"
+      fill="currentColor"
       viewBox="0 0 32 32"
       xmlns="http://www.w3.org/2000/svg"
     >

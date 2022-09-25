@@ -33,6 +33,7 @@ function App() {
 
               <a
                 href="https://www.facebook.com/profile.php?id=100009528041096"
+                target="_blank"
                 className="icon icon--facebook"
               >
                 <svg
@@ -49,6 +50,7 @@ function App() {
 
               <a
                 href="https://github.com/jattapol456"
+                target="_blank"
                 className="icon icon--github"
               >
                 <svg
@@ -65,6 +67,7 @@ function App() {
 
               <a
                 href="https://gitlab.com/jattapol456"
+                target="_blank"
                 className="icon icon--gitlab"
               >
                 <svg

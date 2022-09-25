@@ -6,7 +6,7 @@ export default function Typescrip() {
       xmlns="http://www.w3.org/2000/svg"
       width="80"
       height="80"
-      fill="#7e7e7e"
+      fill="currentColor"
       preserveAspectRatio="xMidYMid meet"
       viewBox="0 0 256 256"
     >

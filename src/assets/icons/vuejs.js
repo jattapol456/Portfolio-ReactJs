@@ -6,7 +6,7 @@ export default function Vuejs() {
       xmlns="http://www.w3.org/2000/svg"
       width="80"
       height="80"
-      fill="#7e7e7e"
+      fill="currentColor"
       class=""
       viewBox="0 0 448 512"
     >
