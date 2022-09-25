@@ -2,39 +2,82 @@ import "./App.css";
 import Aboutme from "./components/aboutme";
 import Experienc from "./components/experienc";
 import Skill from "./components/skill";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger.js";
 
 function App() {
+  gsap.registerPlugin(ScrollTrigger);
+  // REVEAL //
+  gsap.utils.toArray(".revealUp").forEach(function (elem) {
+    ScrollTrigger.create({
+      trigger: elem,
+      start: "top 80%",
+      end: "bottom 20%",
+      markers: false,
+      onEnter: function () {
+        gsap.fromTo(
+          elem,
+          { y: 100, autoAlpha: 0 },
+          {
+            duration: 1.25,
+            y: 0,
+            autoAlpha: 1,
+            ease: "back",
+            overwrite: "auto",
+          }
+        );
+      },
+      onLeave: function () {
+        gsap.fromTo(
+          elem,
+          { autoAlpha: 1 },
+          { autoAlpha: 0, overwrite: "auto" }
+        );
+      },
+      onEnterBack: function () {
+        gsap.fromTo(
+          elem,
+          { y: -100, autoAlpha: 0 },
+          {
+            duration: 1.25,
+            y: 0,
+            autoAlpha: 1,
+            ease: "back",
+            overwrite: "auto",
+          }
+        );
+      },
+      onLeaveBack: function () {
+        gsap.fromTo(
+          elem,
+          { autoAlpha: 1 },
+          { autoAlpha: 0, overwrite: "auto" }
+        );
+      },
+    });
+  });
+
   return (
     <main className="lg:px-56 sm:px-24 px-6 bg-gray-200 py-32">
-      <div id="About" className="selection px-20 py-20 rounded-lg shadow-lg mb-52 bg-white">
-        <Aboutme/>
-      </div>
-
-      <div className="selection px-12 py-12 rounded-lg shadow-lg mb-52 bg-white">
-        <div className="font-bold uppercase">
-          <h1 className="text-5xl text-center"> Resume </h1>
-          <div id="Experience" className="pt-8">
-            <p className="text-2xl pl-[5%]">Experience</p>
-            <div className="pt-[50px]">
-              <Experienc />
-            </div>
-          </div>
-
-          <div id="Skills" className="pt-20">
-            <p className="text-2xl pl-[5%]">Technical Skill</p>
-            <div className="pt-[50px]">
-              <Skill />
-            </div>
-          </div>
+      <div className="section">
+        <div className="revealUp">
+          <Aboutme />
         </div>
       </div>
 
-      <div className="selection px-12 py-12 rounded-lg shadow-lg mb-52 bg-white">
-        <div className="font-bold uppercase">
-          <h1 className="text-5xl text-center"> Resume </h1>
-          
+      <div className="section">
+        <div className="revealUp">
+          <Experienc />
         </div>
       </div>
+
+      <div className="section">
+        <div className="revealUp">
+          <Skill />
+        </div>
+      </div>
+
+      <div class="spacer"></div>
     </main>
   );
 }

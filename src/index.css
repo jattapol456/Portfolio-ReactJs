@@ -16,6 +16,29 @@ code {
     monospace;
 }
 
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  position: relative;
+  letter-spacing: 0.04em;
+}
+
+.section {
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+}
+
+.revealUp {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.spacer {
+  height: 50vh;
+}
+
 .selection p::selection {
   background: #29e8f6;
 }
