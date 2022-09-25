@@ -29,11 +29,6 @@ code {
   color:  #a7a7a7;
 }
 
-.text-Developer {
-  --tw-text-opacity: 1;
-  color:  #29b6f6;
-}
-
 .icons {
   display: flex;
   column-gap: 25px;

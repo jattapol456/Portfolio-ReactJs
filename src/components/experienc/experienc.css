@@ -14,6 +14,11 @@
   color: rgba(114, 114, 114, var(--tw-text-opacity));
 }
 
+.unactive-box:hover {
+  color: #29e8f6;
+  border-color: #29e8f6;
+}
+
 .text-sub-title {
   --tw-text-opacity: 1;
   color: rgba(176, 226, 255, var(--tw-text-opacity));
@@ -27,4 +32,3 @@
 .border- {
   border-color: #29b6f6;
 }
-
