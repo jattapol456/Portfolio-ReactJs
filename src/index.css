@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +14,85 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.selection p::selection {
+  background: #29e8f6;
+}
+
+.selection ::selection {
+  background: #ffbb00;
+}
+
+.text-date {
+  --tw-text-opacity: 1;
+  color:  #a7a7a7;
+}
+
+.text-Developer {
+  --tw-text-opacity: 1;
+  color:  #29b6f6;
+}
+
+.icons {
+  display: flex;
+  column-gap: 25px;
+}
+.icon {
+  width: 50px;
+  height: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 26px;
+  color: #a7a7a7;
+  border-radius: 50%;
+  outline: 2px solid #a7a7a7;
+  transition-property: outline-offset, outline-color, background-color;
+  transition-duration: .25px;
+}
+
+.icon:hover {
+  outline-offset: 4px;
+}
+
+.icon:hover .i{
+  animation: shake .25px;
+}
+
+/* .icon--instagram:hover {
+  background-image: radial-gradient(circle at 30% 107%,
+  #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  color: #ffff;
+  outline-color: #a02d76;
+} */
+
+.icon--facebook:hover {
+  background-color: #29b6f6;
+  color: #ffff;
+  outline-color: #29b6f6;
+}
+
+.icon--github:hover {
+  background-color: #404753;
+  color: #ffff;
+  outline-color: #404753;
+}
+
+.icon--gitlab:hover {
+  background-color: #fd892a;
+  color: #ffff;
+  outline-color: #fd892a;
+}
+
+@keyframes shake {
+  50%{transform: rotate(15deg);}
+  60%{transform: rotate(-15deg);}
+  70%{transform: rotate(15deg);}
+  80%{transform: rotate(-15deg);}
+}
+
+.border- {
+  border-color: #29b6f6;
 }
