@@ -6,21 +6,21 @@ import Skill from "./components/skill";
 function App() {
   return (
     <main className="lg:px-56 sm:px-24 px-6 bg-gray-200 py-32">
-      <div className="selection px-20 py-20 rounded-lg shadow-lg mb-52 bg-white">
+      <div id="About" className="selection px-20 py-20 rounded-lg shadow-lg mb-52 bg-white">
         <Aboutme/>
       </div>
 
       <div className="selection px-12 py-12 rounded-lg shadow-lg mb-52 bg-white">
         <div className="font-bold uppercase">
           <h1 className="text-5xl text-center"> Resume </h1>
-          <div className="pt-8">
+          <div id="Experience" className="pt-8">
             <p className="text-2xl pl-[5%]">Experience</p>
             <div className="pt-[50px]">
               <Experienc />
             </div>
           </div>
 
-          <div className="pt-20">
+          <div id="Skills" className="pt-20">
             <p className="text-2xl pl-[5%]">Technical Skill</p>
             <div className="pt-[50px]">
               <Skill />

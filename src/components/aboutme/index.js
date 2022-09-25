@@ -1,14 +1,16 @@
 import React from "react";
 import profile from "../../assets/images/Profile.jpg";
+import './aboutme.css'
 
 export default function Aboutme() {
   return (
     <div className="flex sm:justify-between sm:items-center flex-col sm:flex-row">
       <div className="sm:w-1/2 w-full sm:order-first order-last mt-12 sm:mt-0">
-        <div className="font-bold uppercase text-center">
-          <h1 className="text-5xl">Hi, I am Jattapol.</h1>
+        <div className="jattapol font-bold uppercase space-y-1 text-center">
+          <h1 className="">Hi, I am Jattapol.</h1>
+          <h1 className="">Hi, I am Jattapol.</h1>
         </div>
-        <div className="mt-12">
+        <div className="mt-2">
           <p>I'm a web developer from Thailand.</p>
           <p>I'm passionate about making websites.</p>
           <p>I think that a good website is easy to use and secure.</p>

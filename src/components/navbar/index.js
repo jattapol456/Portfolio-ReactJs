@@ -7,12 +7,12 @@ function Navbar() {
         <a>Jattapol</a>
       </div>
       <div className="menu-left">
-        <button className="flex items-center space-x-10">
+        <ul className="flex items-center space-x-10">
           <a to={{ path: '/', hash: "#About" }}>About</a>
-          <a to={{ path: '/', hash: "#Resume" }}>Resume</a>
+          <a to={{ path: '/', hash: "#Experience" }}>Experience</a>
           <a to={{ path: '/', hash: "#Skills" }}>Skills</a>
           <a to={{ path: '/', hash: "#Projects" }}>Projects</a>
-        </button>
+        </ul>
       </div>
     </header>
   );
