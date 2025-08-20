@@ -1,5 +1,6 @@
 import React from "react";
 import "./skill.css";
+
 import Html from "../../assets/icons/html";
 import Javascrip from "../../assets/icons/javascrip";
 import Typescrip from "../../assets/icons/typescrip";
@@ -17,6 +18,52 @@ import Firebase from "../../assets/icons/firebase";
 import Figma from "../../assets/icons/figma";
 import Photoshop from "../../assets/icons/photoshop";
 import Postman from "../../assets/icons/postman";
+import Dbeaver from "../../assets/icons/dbeaver";
+
+const skillData = [
+  {
+    category: "Programming Languages",
+    items: [
+      { icon: Html, name: "HTML" },
+      { icon: Javascrip, name: "Javascrip" },
+      {
+        icon: Typescrip,
+        name: "Typescrip",
+        props: { className: "w-[75px] h-[75px]" },
+      },
+      { icon: Css, name: "Css" },
+      { icon: Sass, name: "Sass" },
+      { icon: Python, name: "Python" },
+    ],
+  },
+  {
+    category: "Framework",
+    items: [
+      { icon: Vuejs, name: "Vue.js" },
+      { icon: Nuxtjs, name: "Nuxt.js" },
+      { icon: Reacrjs, name: "Reacr.js" },
+      { icon: Flutter, name: "Flutter" },
+      { icon: Nestjs, name: "Nest.js" },
+    ],
+  },
+  {
+    category: "Databases",
+    items: [
+      // { icon: Mongodb, name: "MongoDB" },
+      { icon: Mysql, name: "MySQL" },
+      { icon: Firebase, name: "Firebase" },
+      { icon: Dbeaver, name: "Dbeaver" },
+    ],
+  },
+  {
+    category: "Tools",
+    items: [
+      { icon: Figma, name: "Figma" },
+      { icon: Photoshop, name: "PhotoShop" },
+      { icon: Postman, name: "Postman" },
+    ],
+  },
+];
 
 export default function Skill() {
   return (
@@ -25,105 +72,27 @@ export default function Skill() {
         <h1 className="text-5xl text-center"> Technical Skill </h1>
         <div className="pt-[50px]">
           <div className="space-y-16">
-            <div className="flex justify-around">
-              <div className="text-center space-y-8">
-                <p>Programming Languages</p>
-                <div className="grid grid-cols-6 gap-10">
-                  <div className="skill text-center space-y-3 hover:scale-125">
-                    <Html />
-                    <p>HTML</p>
-                  </div>
-                  <div className="skill text-center space-y-3 hover:scale-125">
-                    <Javascrip />
-                    <p>Javascrip</p>
-                  </div>
-                  <div className="skill text-center space-y-3 hover:scale-125">
-                    <Typescrip className="w-[75px] h-[75px]" />
-                    <p>Typescrip</p>
-                  </div>
-                  <div className="skill text-center space-y-3 hover:scale-125">
-                    <Css />
-                    <p>Css</p>
-                  </div>
-                  <div className="skill text-center space-y-3 hover:scale-125">
-                    <Sass />
-                    <p>Sass</p>
-                  </div>
-                  <div className="skill text-center space-y-3 hover:scale-125">
-                    <Python />
-                    <p>Python</p>
+            {skillData.map((group, idx) => (
+              <div className="flex justify-around" key={idx}>
+                <div className="text-center space-y-8">
+                  <p>{group.category}</p>
+                  <div className={`grid grid-cols-2 items-center gap-10 md:grid-cols-3 lg:flex `}>
+                    {group.items.map((item, i) => {
+                      const Icon = item.icon;
+                      return (
+                        <div
+                          className="skill flex flex-col items-center text-center space-y-3 hover:scale-125"
+                          key={i}
+                        >
+                          {item.props ? <Icon {...item.props} /> : <Icon />}
+                          <p>{item.name}</p>
+                        </div>
+                      );
+                    })}
                   </div>
                 </div>
               </div>
-            </div>
-
-            <div className="flex justify-around">
-              <div className="text-center space-y-8">
-                <p>Framework</p>
-                <div className="grid grid-cols-5 gap-10">
-                  <div className="skill text-center space-y-3 hover:scale-125">
-                    <Vuejs />
-                    <p>Vue.js</p>
-                  </div>
-                  <div className="skill text-center space-y-3 hover:scale-125">
-                    <Nuxtjs />
-                    <p>Nuxt.js</p>
-                  </div>
-                  <div className="skill text-center space-y-3 hover:scale-125">
-                    <Reacrjs />
-                    <p>Reacr.js</p>
-                  </div>
-                  <div className="skill text-center space-y-3 hover:scale-125">
-                    <Flutter />
-                    <p>Flutter</p>
-                  </div>
-                  <div className="skill text-center space-y-3 hover:scale-125">
-                    <Nestjs />
-                    <p>Nest.js</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="flex justify-around">
-              <div className="text-center space-y-8">
-                <p>Databescs</p>
-                <div className="grid grid-cols-3 gap-10">
-                  <div className="skill text-center space-y-3 hover:scale-125">
-                    <Mongodb />
-                    <p>MongoDB</p>
-                  </div>
-                  <div className="skill text-center space-y-3 hover:scale-125">
-                    <Mysql />
-                    <p>MySQL</p>
-                  </div>
-                  <div className="skill text-center space-y-3 hover:scale-125">
-                    <Firebase />
-                    <p>Firebase</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="flex justify-around">
-              <div className="text-center space-y-8">
-                <p>Tools</p>
-                <div className="grid grid-cols-3 gap-10">
-                  <div className="skill text-center space-y-3 hover:scale-125">
-                    <Figma />
-                    <p>Figma</p>
-                  </div>
-                  <div className="skill text-center space-y-3 hover:scale-125">
-                    <Photoshop />
-                    <p>PhotoShop</p>
-                  </div>
-                  <div className="skill text-center space-y-3 hover:scale-125">
-                    <Postman />
-                    <p>Postman</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>

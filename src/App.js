@@ -8,18 +8,14 @@ import { ScrollTrigger } from "gsap/ScrollTrigger.js";
 
 function App() {
   useEffect(() => {
-    animation()
-  }, []);
-
-  const animation = () => {
     gsap.registerPlugin(ScrollTrigger);
-    gsap.utils.toArray(".revealUp").forEach(function (elem) {
+    gsap.utils.toArray(".revealUp").forEach((elem) => {
       ScrollTrigger.create({
         trigger: elem,
         start: "top 80%",
         end: "bottom 20%",
         markers: false,
-        onEnter: function () {
+        onEnter: () => {
           gsap.fromTo(
             elem,
             { y: 100, autoAlpha: 0 },
@@ -32,14 +28,10 @@ function App() {
             }
           );
         },
-        onLeave: function () {
-          gsap.fromTo(
-            elem,
-            { autoAlpha: 1 },
-            { autoAlpha: 0, overwrite: "auto" }
-          );
+        onLeave: () => {
+          gsap.to(elem, { autoAlpha: 0, overwrite: "auto" });
         },
-        onEnterBack: function () {
+        onEnterBack: () => {
           gsap.fromTo(
             elem,
             { y: -100, autoAlpha: 0 },
@@ -52,38 +44,27 @@ function App() {
             }
           );
         },
-        onLeaveBack: function () {
-          gsap.fromTo(
-            elem,
-            { autoAlpha: 1 },
-            { autoAlpha: 0, overwrite: "auto" }
-          );
+        onLeaveBack: () => {
+          gsap.to(elem, { autoAlpha: 0, overwrite: "auto" });
         },
       });
     });
-  };
+  }, []);
+
+  const sections = [
+    { component: <Aboutme />, id: "About" },
+    { component: <Skill />, id: "Skills" },
+    { component: <Experienc />, id: "Experience" }
+  ];
 
   return (
-    <main className="lg:px-56 sm:px-24 px-6 bg-gray-200 py-32">
-      <div className="section">
-        <div className="revealUp">
-          <Aboutme />
+    <main className="lg:px-56 sm:px-24 px-6 bg-gray-200 pt-32">
+      {sections.map((section, idx) => (
+        <div className="section" id={section.id} key={idx}>
+          <div className="revealUp">{section.component}</div>
         </div>
-      </div>
-
-      <div className="section">
-        <div className="revealUp">
-          <Experienc />
-        </div>
-      </div>
-
-      <div className="section">
-        <div className="revealUp">
-          <Skill />
-        </div>
-      </div>
-
-      <div class="spacer"></div>
+      ))}
+      <div className="spacer"></div>
     </main>
   );
 }
